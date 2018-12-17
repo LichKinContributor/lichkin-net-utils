@@ -28,6 +28,21 @@ namespace LichKin.Utils
         /// </summary>
         /// <param name="dictionary">字典</param>
         /// <param name="key">键</param>
+        /// <param name="defaultValue">默认值</param>
+        /// <returns>
+        ///   值
+        /// </returns>
+        public static String GetString(Dictionary<String, String> dictionary, String key, String defaultValue)
+        {
+            String str = GetString(dictionary, key);
+            return str == null || "".Equals(str.Trim()) ? defaultValue : str;
+        }
+
+        /// <summary>
+        ///     从字典中取对应键的值
+        /// </summary>
+        /// <param name="dictionary">字典</param>
+        /// <param name="key">键</param>
         /// <returns>
         ///   值
         /// </returns>
